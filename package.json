@@ -1,6 +1,6 @@
 {
   "name": "react-asyncify",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A React Higher-Order Component for making async requests with Functional Components.",
   "main": "build/index.js",
   "scripts": {
