@@ -17,10 +17,10 @@ const getWeatherForecast = fetcher(FETCH_WEATHER_FORECAST, async () => {
     const res = await axios.get(url);
     // value returned is in getWeatherForecast.data
     return res.data.list;
-    
+});
+
 // pass all fetchers into fetcherWrapper
 fetcherWrapper(getWeatherForecast);
-});
 ```
 
 ### Examples
