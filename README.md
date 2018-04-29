@@ -7,6 +7,22 @@
 npm install --save react-asyncify
 ```
 
+### Usage
+
+```js
+const {fetcher, fetcherWrapper} = props;
+
+const getWeatherForecast = fetcher(FETCH_WEATHER_FORECAST, async () => {
+    const url = "http://api.openweathermap.org/data/2.5/forecast";
+    const res = await axios.get(url);
+    // value returned is in getWeatherForecast.data
+    return res.data.list;
+    
+// pass all fetchers into fetcherWrapper
+fetcherWrapper(getWeatherForecast);
+});
+```
+
 ### Examples
 
 ```js
@@ -44,3 +60,5 @@ const preloadValues = {
 
 export default asyncify(OpenWeatherForecast, preloadValues);
 ```
+
+
